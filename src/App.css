@@ -1,33 +1,154 @@
-.App {
-  text-align: center;
+html {
+  background-image: url(https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  width: 100vw;
+  height: 10vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  color: white;
+  padding: 0px 30px;
+}
+header {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 50vh;
+  width: 100vw;
+  padding-top: 100px;
+  font-family: "Montserrat", sans-serif;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+img {
+  height: 18px;
+  width: 18px;
+}
+button {
+  display: flex;
+  align-items: center;
+  background-color: #fed136;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Boot {
+  width: 50vw;
+}
+.Boot > li {
+  font-size: 25px;
+  font-weight: bold;
+  color: yellow;
+  font-family: "Kaushan Script", cursive;
+}
+.menuBox {
+  display: none;
+}
+.menu {
+  font-family: "Montserrat", sans-serif;
+  flex-grow: 1;
+  cursor: pointer;
+}
+.menu:hover {
+  color: #fed136;
+}
+.drop-down {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 20px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  flex-grow: 1;
+  cursor: pointer;
+}
+.menu-drop:hover {
+  color: #fed136;
+}
+.toggle-menu,
+.toggle-open,
+.toggle-closed {
+  width: 100vw;
+  height: 25vh;
+  top: 0px;
+  z-index: -10;
+  background-color: rgb(33, 37, 40);
+}
+/* .toggle-menu{
+  display: none
+} */
+.toggle-open {
+  animation: openMenu 0.5s forwards linear;
+}
+.toggle-closed {
+  animation: closeMenu 0.5s forwards linear;
+  display: none;
+}
+#btn2 {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
+#title {
+  text-align: center;
+  font-size: 40px;
+}
+
+#greeting {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+@keyframes closeMenu {
   from {
-    transform: rotate(0deg);
+    height: 25vh;
   }
   to {
-    transform: rotate(360deg);
+    height: 0vh;
+  }
+}
+
+@keyframes openMenu {
+  from {
+    height: 0vh;
+  }
+  to {
+    height: 25vh;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .menuBox {
+    display: block;
+  }
+  .menu {
+    display: none;
+    width: 50%;
+  }
+  nav {
+    background: #212529;
+    height: 5vh;
+  }
+  #greeting {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+  }
+  #title {
+    text-align: center;
+    font-size: 30px;
   }
 }
